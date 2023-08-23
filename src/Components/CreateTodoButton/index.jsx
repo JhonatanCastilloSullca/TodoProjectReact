@@ -20,7 +20,13 @@ function CreateTodoButton(){
                 duration-150
                 hover:origin-center
                 hover:rotate-180
-                ">
+                "
+                onClick={
+                    (event)=>{
+                        console.log(event.target)
+                    }
+                }
+                >
             +
         </button>
     );

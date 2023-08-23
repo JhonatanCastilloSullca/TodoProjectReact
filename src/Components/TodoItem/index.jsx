@@ -7,7 +7,9 @@ function TodoItem(props){
                 duration-500 transform hover:bg-green-700 
                 hover:scale-110 hover:shadow-[0_0_10px_1px_rgba(34,197,94,0.3)]
                 Icon-check
-                ${props.completed && "Icon-check--active"}`}>
+                ${props.completed && "Icon-check--active"}`}
+                onClick={props.onComplete}
+                >
                 V
             </a>
             <p className={`
@@ -26,8 +28,10 @@ function TodoItem(props){
                 duration-500 transform hover:bg-red-700 
                 hover:scale-110 hover:shadow-[0_0_10px_1px_rgba(239,68,68,0.3)]
                 Icon-delete
-                '>
-                V
+                '
+                onClick={props.onDelete}
+                >
+                X
             </a>
         
         </div>
